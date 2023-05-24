@@ -21,6 +21,7 @@ int main(int argc, char **argv) {
     cofs << c << std::endl;
   cofs.close();
 
+  // store k-mer lists for each color
   std::unordered_map<size_t, std::unordered_set<size_t>> ckmap;
 
   std::hash<string> hasher;
@@ -47,6 +48,13 @@ int main(int argc, char **argv) {
   }
 
   std::ofstream table_ofs(table_filename);
+
+  // header
+  table_ofs << "color1" << "\t" << "color2" << "\t" <<
+    "color1_kmers" << "\t" << "color2_kmers" << "\t" <<
+    "intersect" << "\t" << "union" << "\t" <<
+    "jaccard" << std::endl;
+
   // pairwise jaccard distances
   for (auto c1 : ckmap) {
     for (auto c2 : ckmap) {

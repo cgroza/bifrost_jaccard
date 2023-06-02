@@ -1,0 +1,7 @@
+* ~bifrost_jaccard~
+~bifrost_jaccard~ recovers the list of colors from a graph and calculates the pair-wise jaccard distance between colors based on the number of common k-mers.
+
+** Usage
+#+BEGIN_SRC bash
+bifrost_jaccard prefix/to/bifrost/files colros.txt pairwise_distances.tsv
+#+END_SRC

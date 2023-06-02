@@ -3,5 +3,5 @@
 
 ** Usage
 #+BEGIN_SRC bash
-bifrost_jaccard prefix/to/bifrost/files colros.txt pairwise_distances.tsv
+bifrost_jaccard prefix/to/bifrost/files colors.txt pairwise_distances.tsv
 #+END_SRC
